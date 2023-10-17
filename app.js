@@ -6,10 +6,6 @@ var logger = require("morgan");
 var app = express();
 
 var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
-var contactRouter = require("./routes/contact");
-var aboutRouter = require("./routes/about");
-var productRouter = require("./routes/products");
 var tvRouter = require("./routes/tv");
 
 // view engine setup
@@ -22,10 +18,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
-app.use("/contact", contactRouter);
-app.use("/about", aboutRouter);
-app.use("/users", usersRouter);
-app.use("/product-details", productRouter);
 app.use("/tv", tvRouter);
 
 // catch 404 and forward to error handler

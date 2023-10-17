@@ -9,7 +9,7 @@ router.get("/", async function (req, res, next) {
     const response = await axios.get(apiUrl);
     const apiData = response.data.response; // Assuming the API returns an array of objects
     console.log(apiData);
-    res.render("index", { apiData });
+    res.render("tv", { apiData });
   } catch (error) {
     console.error(error);
   }
